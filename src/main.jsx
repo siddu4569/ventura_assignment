@@ -15,7 +15,11 @@ ReactDOM.createRoot(root).render(
     <ScrollToTop/>
     <Routes>
       
-      <Route path="/" element={<IPO/>}/>
+      <Route path="/" element = {<IPO/>}>
+        <Route index element={<IPOMain/>}/>
+        <Route path="/ipo/:companyID" element={<IPODetail/>} />
+      </Route>
+
 
       <Route path="/ipo" element = {<IPO/>}>
         <Route index element={<IPOMain/>}/>
