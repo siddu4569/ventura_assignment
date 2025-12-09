@@ -1,0 +1,54 @@
+
+
+@import "tailwindcss";
+@font-face {
+    font-family: 'sora';
+    src: url('/src/assets/fonts/soraa.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+  margin:  0;  
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "sora";
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  margin-bottom: 30px;
+}
+
+*:focus {
+  outline: none;
+}
+
+
+
+@theme {
+  --color-primary: #FF844B;
+  --color-secondary: #191442;
+  --color-bermuda: #78dcca;
+}
+
+
+
+a{
+    text-decoration: solid;
+}
+
+
+#bar1 {
+  background: linear-gradient(rgb(57, 55, 69) 0%, rgb(92, 89, 104) 100%)
+}
+
+
+#bar2{
+  background: linear-gradient(rgb(114, 96, 226) 0%, rgb(114, 96, 226) 100%);
+}
+
+#bar3{
+  background: linear-gradient(rgb(250, 79, 0) 0%, rgb(255, 132, 75) 100%);
+}
