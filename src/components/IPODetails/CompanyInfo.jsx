@@ -106,46 +106,43 @@ function CompanyInfo({companyInfo}) {
             
 
 
-            <div className='border-1 border-[#00000020] w-full p-5 rounded-2xl '>
-                <h3>About the company</h3>
-                <p className='text-sm text-[#6b6874]'>Established in 1996, Swastika commenced operations with the object of business of aluminium casting by setting up a foundry, which was a very unique concept at that time.Presently the company has advanced machining, inspection and testing facilities in India which is backed with an efficient team of metallurgists and professionals.The company now supplies the casting as original equipment (ready to use component) to reputed Companies in India and also exports to parts of Europe, and U.S.A.
-                
-                </p>
+           <div className='border-1 border-[#00000020] w-full p-5 rounded-2xl '>
+    <h3>About the company</h3>
+    <p className='text-sm text-[#6b6874]'>
+        Established in 1996, Swastika commenced operations with the object of business of aluminium casting by setting up a foundry, which was a very unique concept at that time.Presently the company has advanced machining, inspection and testing facilities in India which is backed with an efficient team of metallurgists and professionals.The company now supplies the casting as original equipment (ready to use component) to reputed Companies in India and also exports to parts of Europe, and U.S.A.
+    </p>
+</div>
 
+
+<div className='relative border-1 border-[#00000020] w-full p-5 rounded-2xl flex flex-col gap-5'>
+    <h3>Company Financials</h3>
+
+    <div className='flex bg-[#f8f8f8]'>
+        {["Revenue","Total Assets","Profit"].map(val =>
+            <div 
+                key={val}
+                onClick={()=>setSelectionSection(val)}
+                className={`relative w-1/3 flex justify-center text-xs md:text-sm p-2 rounded-xl cursor-pointer
+                ${selectedSection == val ? "bg-secondary text-white" : ""}`}>
+                {val}
             </div>
-            
-            <div className='relative border-1 border-[#00000020] w-full p-5 rounded-2xl h-[350px] flex flex-col gap-5'>
-                <h3>Company Financials</h3>
+        )}
+    </div>
 
-                <div className='flex bg-[#f8f8f8]'  > 
-                    {["Revenue","Total Assets","Profit"].map((val, idx)=>
-                    <div 
-                    onClick={()=>setSelectionSection(val)} 
-                    key= {val} 
-                    className={ `relative w-1/3 flex justify-center text-xs md:text-sm p-2 rounded-xl
-                    ${selectedSection == val ? "bg-secondary text-white" : ""}`} >
-                        {val}
-                    </div>
-                    )}
+    
+    <div className='bg-[#f8f8f8] flex flex-col gap-4 p-3'>
+        {financials.map((val, idx)=> {
+            const keyObj = selectedSection.split(" ").map((v,i)=> i==0 ? v.toLowerCase() : v).join("");
+            return (
+                <div className='flex justify-between text-sm border-b pb-2' key={idx}>
+                    <span>{val.year}</span>
+                    <span className='font-medium'>{val[keyObj]}</span>
                 </div>
+            )
+        })}
+    </div>
+</div>
 
-
-                <div className='bg-[#f8f8f8] h-[200px] flex flex-col gap-5 p-3'>
-                    {
-                        financials.map((val, idx)=> (
-                            <div className='flex gap-2 items-center text-sm' key={idx}>
-                                <h4 className='text-sm'>{val.year}</h4>
-                                <div className='h-2 w-3 rounded-3xl ' id={`bar${idx+1}`}></div>
-                                <div className='h-[32px] w-30 md:w-45 lg:w-100 rounded-r-md' id={`bar${idx+1}`}></div>
-                                <div className='text-xs md:text-sm'>{val[selectedSection.split(" ").map((val,idx)=>(idx==0 ? val.toLowerCase() : val)).join("")]}</div>
-                            </div>
-                        ))
-                    }
-                    
-
-                </div>
-
-            </div>
 
             
             
