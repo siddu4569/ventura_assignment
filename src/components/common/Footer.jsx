@@ -1,7 +1,4 @@
-
-import React from 'react'
 import {  WHITE_LOGO_URL } from '../../utils/constant'
-
 function Footer() {
   return (
     <div className='bg-secondary relative w-full flex flex-col gap-4 rounded-3xl text-white p-10 pb-5'>
