@@ -1,6 +1,6 @@
 
 import React from 'react'
-import {  WHITE_LOGO_URL } from '../utils/constant'
+import {  WHITE_LOGO_URL } from '../../utils/constant'
 
 function Footer() {
   return (

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import { IPO_DATA } from "../../utils/constant";   
-import CompanyInfo from "../../components/IPODetails/CompanyInfo";
-import Footer from '../../components/Footer';
+import { IPO_DATA } from "../utils/constant";   
+import CompanyInfo from "../components/IPODetails/CompanyInfo";
+// import Footer from '../../components/Footer';
 
 const slugify = (name) =>
   name.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and").replace(/\./g,"").replace(/,/g,"");

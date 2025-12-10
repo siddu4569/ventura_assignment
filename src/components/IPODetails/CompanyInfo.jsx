@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import GoBack from '../GoBack'
+import GoBack from '../common/GoBack'
 import { ChevronLeft } from 'lucide-react'
 import { useLocation } from 'react-router';
 import Timeline from './Timeline';
@@ -103,50 +103,12 @@ function CompanyInfo({companyInfo}) {
 
             <Timeline timeline= {timeline}/>
 
-            
-
-
            <div className='border-1 border-[#00000020] w-full p-5 rounded-2xl '>
     <h3>About the company</h3>
     <p className='text-sm text-[#6b6874]'>
         Established in 1996, Swastika commenced operations with the object of business of aluminium casting by setting up a foundry, which was a very unique concept at that time.Presently the company has advanced machining, inspection and testing facilities in India which is backed with an efficient team of metallurgists and professionals.The company now supplies the casting as original equipment (ready to use component) to reputed Companies in India and also exports to parts of Europe, and U.S.A.
     </p>
 </div>
-
-
-<div className='relative border-1 border-[#00000020] w-full p-5 rounded-2xl flex flex-col gap-5'>
-    <h3>Company Financials</h3>
-
-    <div className='flex bg-[#f8f8f8]'>
-        {["Revenue","Total Assets","Profit"].map(val =>
-            <div 
-                key={val}
-                onClick={()=>setSelectionSection(val)}
-                className={`relative w-1/3 flex justify-center text-xs md:text-sm p-2 rounded-xl cursor-pointer
-                ${selectedSection == val ? "bg-secondary text-white" : ""}`}>
-                {val}
-            </div>
-        )}
-    </div>
-
-    
-    <div className='bg-[#f8f8f8] flex flex-col gap-4 p-3'>
-        {financials.map((val, idx)=> {
-            const keyObj = selectedSection.split(" ").map((v,i)=> i==0 ? v.toLowerCase() : v).join("");
-            return (
-                <div className='flex justify-between text-sm border-b pb-2' key={idx}>
-                    <span>{val.year}</span>
-                    <span className='font-medium'>{val[keyObj]}</span>
-                </div>
-            )
-        })}
-    </div>
-</div>
-
-
-            
-            
-
         </div>
   )
 }
