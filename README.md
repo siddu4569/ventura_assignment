@@ -4,4 +4,7 @@ A React project built using **Vite**.
 This repository contains the assignment implementation for Ventura, showcasing UI components and functionality with clean structure and reusable code.
 
 #SCREENSHOTS
-![image1](<img width="1863" height="882" alt="image" src="https://github.com/user-attachments/assets/6640b2fd-541f-4b4a-a508-da6e28087337" />
+![image1](<img width="1863" height="882" alt="image" src="https://github.com/user-attachments/assets/6640b2fd-541f-4b4a-a508-da6e28087337" />)
+![image2](<img width="1857" height="886" alt="image" src="https://github.com/user-attachments/assets/80d2a6c1-a284-4b2b-80d4-5a9152d9461d" />)
+![image3]()
+![image4]()
