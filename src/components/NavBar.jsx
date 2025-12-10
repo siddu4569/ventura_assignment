@@ -14,8 +14,7 @@ function NavBar() {
         <div className='hover:text-primary text-[14px] xl:text-sm 2xl:text-lg hidden lg:flex'>Trade</div>
         <div className='hover:text-primary text-[14px] xl:text-sm 2xl:text-lg hidden lg:flex'>Spotlight</div>
         <div className='hover:text-primary text-[14px] xl:text-sm 2xl:text-lg hidden lg:flex'>Ease API</div>
-        <div className='hover:text-primary text-[14px] xl:text-sm 2xl:text-lg hidden lg:flex'>Pricing</div>
-        <div className='hover:text-primary text-[14px] xl:text-sm 2xl:text-lg hidden lg:flex'>Learn</div>
+       
       </div>
 
       <div className='flex gap-5' >
